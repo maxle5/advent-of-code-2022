@@ -14,19 +14,24 @@ func main() {
 		log.Fatal(err)
 	}
 
-	scanner := bufio.NewScanner(readfile)
-
 	sum := 0
 	topThreeElves := [3]int{}
-	for scanner.Scan() {
-		calorieStr := scanner.Text()
+	scanner := bufio.NewScanner(readfile)
 
-		// if belongs to the same elf
-		if len(calorieStr) > 0 {
-			calorie, _ := strconv.Atoi(calorieStr)
+	// loop through the lines in file
+	for scanner.Scan() {
+		// read the current line and attempt to convert to in
+		calorie, err := strconv.Atoi(scanner.Text())
+
+		// check if the current line is a number
+		if err == nil {
+			// keep a running total for 'this' elf
 			sum = sum + calorie
 		} else {
+			// check if 'this' elf is in the top 3
 			indexToReplace := FindIndexToReplace(sum, topThreeElves[:])
+
+			// replace an elf if 'this' elf is in the top 3
 			if indexToReplace > -1 {
 				topThreeElves[indexToReplace] = sum
 			}

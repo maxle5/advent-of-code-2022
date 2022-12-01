@@ -14,22 +14,24 @@ func main() {
 		log.Fatal(err)
 	}
 
-	scanner := bufio.NewScanner(readfile)
-
 	sum := 0
 	largestSum := 0
-	for scanner.Scan() {
-		line := scanner.Text()
+	scanner := bufio.NewScanner(readfile)
 
-		// if belongs to the same elf
-		if len(line) > 0 {
-			calorie, _ := strconv.Atoi(line)
+	// loop through lines in file
+	for scanner.Scan() {
+		// read the current line and attempt to convert to in
+		calorie, err := strconv.Atoi(scanner.Text())
+
+		// check if the current line is a number
+		if err == nil {
+			// keep a running total for 'this' elf
 			sum = sum + calorie
 		} else {
-			if sum > largestSum {
-				largestSum = sum
-			}
+			// check if 'this' elf has a larger sum than the top contender
+			largestSum = max(largestSum, sum)
 
+			// reset the running total for the 'next' elf
 			sum = 0
 		}
 	}
@@ -40,4 +42,12 @@ func main() {
 	}
 
 	println(largestSum)
+}
+
+func max(a int, b int) int {
+	if a > b {
+		return a
+	}
+
+	return b
 }
