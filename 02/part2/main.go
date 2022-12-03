@@ -26,12 +26,28 @@ func main() {
 		line := scanner.Text()
 		result := strings.Split(line, " ")
 
+        loseMap := map[rune] rune{
+            'A': 'C',
+            'B': 'A',
+            'C': 'B',
+        }
+        drawMap := map[rune] rune{
+            'A': 'A',
+            'B': 'B',
+            'C': 'C',
+        }
+        winMap := map[rune] rune{
+            'A': 'B',
+            'B': 'C',
+            'C': 'A',
+        }
+        winLoseMap :=  map[rune] (map[rune] rune){
+            'X': loseMap, 
+            'Y': drawMap,
+            'Z': winMap,
+        } 
 		theirMove := rune(result[0][0])
-		myMove := map[rune]rune{
-			'X': 'A',
-			'Y': 'B',
-			'Z': 'C',
-		}[rune(result[1][0])]
+		myMove := winLoseMap[rune(result[1][0])][theirMove]
 
 		totalScore = totalScore + baseScoreMap[myMove] + score(theirMove, myMove)
 	}
