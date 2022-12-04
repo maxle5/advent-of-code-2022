@@ -1,0 +1,16 @@
+D:\Source\aoc-2022\Day02\bin\Debug\net7.0\input.txt
+D:\Source\aoc-2022\Day02\bin\Debug\net7.0\Day02.exe
+D:\Source\aoc-2022\Day02\bin\Debug\net7.0\Day02.deps.json
+D:\Source\aoc-2022\Day02\bin\Debug\net7.0\Day02.runtimeconfig.json
+D:\Source\aoc-2022\Day02\bin\Debug\net7.0\Day02.dll
+D:\Source\aoc-2022\Day02\bin\Debug\net7.0\Day02.pdb
+D:\Source\aoc-2022\Day02\obj\Debug\net7.0\Day02.csproj.AssemblyReference.cache
+D:\Source\aoc-2022\Day02\obj\Debug\net7.0\Day02.GeneratedMSBuildEditorConfig.editorconfig
+D:\Source\aoc-2022\Day02\obj\Debug\net7.0\Day02.AssemblyInfoInputs.cache
+D:\Source\aoc-2022\Day02\obj\Debug\net7.0\Day02.AssemblyInfo.cs
+D:\Source\aoc-2022\Day02\obj\Debug\net7.0\Day02.csproj.CoreCompileInputs.cache
+D:\Source\aoc-2022\Day02\obj\Debug\net7.0\Day02.dll
+D:\Source\aoc-2022\Day02\obj\Debug\net7.0\refint\Day02.dll
+D:\Source\aoc-2022\Day02\obj\Debug\net7.0\Day02.pdb
+D:\Source\aoc-2022\Day02\obj\Debug\net7.0\Day02.genruntimeconfig.cache
+D:\Source\aoc-2022\Day02\obj\Debug\net7.0\ref\Day02.dll
